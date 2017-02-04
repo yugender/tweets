@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="loginButtonImage" destination="ayv-d7-MJq" id="F3c-Qp-ErW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wu-Bv-TCg" userLabel="Login Container">
+                    <rect key="frame" x="40" y="40" width="295" height="587"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06l-E2-Ml7" userLabel="Image Container">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="140"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twiiter-logo-40" translatesAutoresizingMaskIntoConstraints="NO" id="wyY-uC-4i0">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="VwA-TK-hGD"/>
+                                        <constraint firstAttribute="width" constant="80" id="vY0-Ft-CjF"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="wyY-uC-4i0" firstAttribute="top" secondItem="06l-E2-Ml7" secondAttribute="top" id="a5y-N2-Led"/>
+                                <constraint firstItem="wyY-uC-4i0" firstAttribute="leading" secondItem="06l-E2-Ml7" secondAttribute="leading" id="aLy-Xc-DaP"/>
+                                <constraint firstAttribute="height" constant="140" id="qbO-8b-Gpb"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DtF-Hu-eup" userLabel="content container">
+                            <rect key="frame" x="0.0" y="140" width="295" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeE-KJ-Mnz">
+                                    <rect key="frame" x="0.0" y="0.0" width="240.5" height="31.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="YLS-4l-vn4"/>
+                                <constraint firstItem="GeE-KJ-Mnz" firstAttribute="top" secondItem="DtF-Hu-eup" secondAttribute="top" id="dRt-Ed-2Zk"/>
+                                <constraint firstItem="GeE-KJ-Mnz" firstAttribute="leading" secondItem="DtF-Hu-eup" secondAttribute="leading" id="uNh-hp-RQP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFE-AZ-VaI" userLabel="button container">
+                            <rect key="frame" x="0.0" y="260" width="295" height="40"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ayv-d7-MJq" userLabel="Login Image View">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMb-uE-Yfo">
+                                    <rect key="frame" x="128.5" y="5" width="38" height="30"/>
+                                    <state key="normal" title="Login">
+                                        <color key="titleColor" red="0.10691795498132706" green="0.56283688545227051" blue="0.853648841381073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onLoginButton:" destination="-1" eventType="touchUpInside" id="0q3-q6-UmY"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ayv-d7-MJq" firstAttribute="height" secondItem="iFE-AZ-VaI" secondAttribute="height" id="0co-Ds-cWd"/>
+                                <constraint firstItem="ayv-d7-MJq" firstAttribute="leading" secondItem="iFE-AZ-VaI" secondAttribute="leading" id="53k-DN-Fa8"/>
+                                <constraint firstItem="PMb-uE-Yfo" firstAttribute="centerY" secondItem="iFE-AZ-VaI" secondAttribute="centerY" id="KAB-Xe-Avo"/>
+                                <constraint firstItem="PMb-uE-Yfo" firstAttribute="centerX" secondItem="iFE-AZ-VaI" secondAttribute="centerX" id="L6E-FW-EV4"/>
+                                <constraint firstAttribute="height" constant="40" id="LSB-EL-ELY"/>
+                                <constraint firstItem="ayv-d7-MJq" firstAttribute="top" secondItem="iFE-AZ-VaI" secondAttribute="top" id="Qn3-wW-XvM"/>
+                                <constraint firstItem="ayv-d7-MJq" firstAttribute="width" secondItem="iFE-AZ-VaI" secondAttribute="width" id="dtF-cL-BMF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="06l-E2-Ml7" secondAttribute="trailing" id="0UI-n8-YG7"/>
+                        <constraint firstItem="iFE-AZ-VaI" firstAttribute="leading" secondItem="DtF-Hu-eup" secondAttribute="leading" id="13a-rM-0Ro"/>
+                        <constraint firstItem="DtF-Hu-eup" firstAttribute="leading" secondItem="06l-E2-Ml7" secondAttribute="leading" id="79T-tv-AC5"/>
+                        <constraint firstItem="DtF-Hu-eup" firstAttribute="width" secondItem="06l-E2-Ml7" secondAttribute="width" id="E5K-kg-hjr"/>
+                        <constraint firstItem="06l-E2-Ml7" firstAttribute="leading" secondItem="1wu-Bv-TCg" secondAttribute="leading" id="JHg-PC-v4F"/>
+                        <constraint firstItem="DtF-Hu-eup" firstAttribute="top" secondItem="06l-E2-Ml7" secondAttribute="bottom" id="WGU-Jg-qV8"/>
+                        <constraint firstItem="iFE-AZ-VaI" firstAttribute="top" secondItem="DtF-Hu-eup" secondAttribute="bottom" constant="60" id="eEY-ll-TZB"/>
+                        <constraint firstItem="iFE-AZ-VaI" firstAttribute="width" secondItem="DtF-Hu-eup" secondAttribute="width" id="tj8-7G-mGJ"/>
+                        <constraint firstItem="06l-E2-Ml7" firstAttribute="top" secondItem="1wu-Bv-TCg" secondAttribute="top" id="xss-c8-YLM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.11547166854143143" green="0.62894904613494873" blue="0.94885319471359253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1wu-Bv-TCg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="0Nu-41-6Sc"/>
+                <constraint firstItem="1wu-Bv-TCg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="6gu-V7-OWq"/>
+                <constraint firstAttribute="bottom" secondItem="1wu-Bv-TCg" secondAttribute="bottom" constant="40" id="Zp0-UF-4PQ"/>
+                <constraint firstAttribute="trailing" secondItem="1wu-Bv-TCg" secondAttribute="trailing" constant="40" id="odI-lg-CFa"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="twiiter-logo-40" width="40" height="40"/>
+    </resources>
+</document>
